@@ -1,3 +1,11 @@
+body{
+    background-color:#F3A2BE  ;
+    /* background-image: url("img.img"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 1 */
+
+}
+
 
 .box{
 display: flex;
@@ -12,6 +20,7 @@ text-align: center;
     width: 60%;
     height: 300px;
     text-align: center;
+    margin-top: 60px;
     background-color: #C6E6E3;
 }
 
@@ -28,7 +37,7 @@ text-align: center;
 
 .header_btn{
     float: right;
-    background-color:#81BFB7  ;
+    background-color:#FFD3DD  ;
     margin-right:10px ;
     margin-top: 10px;
     width: 35px;
@@ -40,6 +49,35 @@ text-align: center;
 }
 
 
-.header_btn.hover{
-    border-color:  #F3A2BE  ;
+.header_btn:hover{
+    box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.83);
+  transition: box-shadow 0.1s;
+}
+
+.tasks{
+display: flex;
+text-align: left;
+padding: 5px;
+background-color: #C6E6E3;
+padding-left: 40px;
+border-bottom: solid #ccc .5px ;
+
+}
+
+.task__inf{
+    width: 70%;
+  
+   color: whitesmoke;
+
+ 
+
+}
+
+.task_action{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+/* background-color:#FFD3DD ; */
+width: 40%;
 }
