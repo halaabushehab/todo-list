@@ -3,7 +3,8 @@ body{
     /* background-image: url("img.img"); */
     /* background-repeat: no-repeat; */
     /* background-size: 1 */
-
+font-family:Lobster
+;
 }
 
 
@@ -18,7 +19,7 @@ text-align: center;
 
 .tasktable{
     width: 60%;
-    height: 300px;
+    /* height: 300px; */
     text-align: center;
     margin-top: 60px;
     background-color: #C6E6E3;
@@ -32,7 +33,7 @@ text-align: center;
     color:#81BFB7 ;
     font-size: 15px;
     font-family:cursive;
-    padding: 10px ;
+    padding:5px ;
 }
 
 .header_btn{
@@ -54,30 +55,35 @@ text-align: center;
   transition: box-shadow 0.1s;
 }
 
-.tasks{
+tasks{
 display: flex;
 text-align: left;
-padding: 5px;
+padding-bottom: 5px;
 background-color: #C6E6E3;
 padding-left: 40px;
 border-bottom: solid #ccc .5px ;
-
 }
 
-.task__inf{
-    width: 70%;
-  
-   color: whitesmoke;
+.tasks:hover{
+    box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.83);
+transition:   box-shadow .02;
+}
 
- 
+
+.task__inf{
+    width: 60%;
+  
+   color: #F3A2BE;
+
 
 }
 
 .task_action{
 
 display: flex;
+text-align:end;
+
 justify-content: space-around;
 align-items: center;
-/* background-color:#FFD3DD ; */
 width: 40%;
 }
