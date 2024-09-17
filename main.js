@@ -2,28 +2,30 @@ let tasks=[
 {
     "titel":"reading book",
     "date":"15/5/2025",
-    "Isdone":"false",
+    "Isdone":false,
 },
 {
     "titel":"wlaking",
     "date":"4/4/2024",
-    "Isdone":"false",
+    "Isdone":false,
 },
 
 {
     "titel":"watching move",
     "date":"27/11/2024",
-    "Isdone":"false",
+    "Isdone":false,
 }
 
 ]
-document.getElementById('tasks').innerHTML=""
+
+function fillTask(){
+$('.tasks').html("")
 
 for(task of tasks){
 
     let content=
     `  <!-- tasks -->
-        <div id="tasks"  class="tasks">
+        <div   class="tasks">
                 <!-- tasks inf -->
                 <div id="task__inf">
                 <h2>${task.titel}</h2>
@@ -42,5 +44,22 @@ for(task of tasks){
     
         </div>
        <!-- //tasks //-->`
-document.getElementById('tasks').innerHTML+=content
+document.querySelector('.tasks').innerHTML+=content
 }
+}
+fillTask()
+$('.header_btn1 ').on('click' ,()=>{
+
+    const d = new Date()
+    let date =  d.getDate()+"/"+  (d.getMonth()+1)+"/"+d.getFullYear() +" | "+d.getHours()+":"+d.getMinutes()
+
+let name=prompt("add new task ")
+let task_object={
+    "titel":name,
+    "date":date,
+    "Isdone":false,
+}
+tasks.push(task_object)
+fillTask()
+
+})

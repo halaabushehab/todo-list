@@ -3,8 +3,10 @@ body{
     /* background-image: url("img.img"); */
     /* background-repeat: no-repeat; */
     /* background-size: 1 */
-font-family:Lobster
-;
+font-family:Lobster;
+flex-wrap: wrap;
+
+
 }
 
 
@@ -18,7 +20,7 @@ text-align: center;
 
 
 .tasktable{
-    width: 60%;
+    width: 50%;
     /* height: 300px; */
     text-align: center;
     margin-top: 60px;
@@ -35,9 +37,25 @@ text-align: center;
     font-family:cursive;
     padding:5px ;
 }
+.header_btn1{
+    float:right;
+    background-color:#FFD3DD  ;
+    margin-right:10px ;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    font-size:10px ;
+     box-shadow: 0px 3px 5px rgba(168, 168, 136, .45) ; 
+}
 
+.header_btn1:hover{
+    box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.83);
+  transition: box-shadow 0.1s;
+}
 .header_btn{
-    float: right;
+    float:right;
     background-color:#FFD3DD  ;
     margin-right:10px ;
     margin-top: 10px;
@@ -55,35 +73,35 @@ text-align: center;
   transition: box-shadow 0.1s;
 }
 
-tasks{
+ .tasks{
+    
 display: flex;
-text-align: left;
+flex-direction: column;
+  
 padding-bottom: 5px;
 background-color: #C6E6E3;
 padding-left: 40px;
 border-bottom: solid #ccc .5px ;
-}
+color: #F3A2BE;
 
-.tasks:hover{
+} 
+
+ .tasks:hover{
     box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.83);
-transition:   box-shadow .02;
-}
-
+transition:box-shadow .02;
+} 
 
 .task__inf{
-    width: 60%;
-  
-   color: #F3A2BE;
+    flex-direction: column;
+    text-align: left;
+} 
 
 
-}
 
-.task_action{
+ .task_action{
 
 display: flex;
-text-align:end;
-
+float: right;
 justify-content: space-around;
-align-items: center;
-width: 40%;
-}
+
+} 
