@@ -77,9 +77,9 @@ text-align: center;
     
 display: flex;
 flex-direction: column;
-  
 padding-bottom: 5px;
-background-color: #C6E6E3;
+
+ background-color: #C6E6E3; 
 padding-left: 40px;
 border-bottom: solid #ccc .5px ;
 color: #F3A2BE;
@@ -90,6 +90,10 @@ color: #F3A2BE;
     box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.83);
 transition:box-shadow .02;
 } 
+ 
+.done{
+    background-color:#81BFB7 ;
+}
 
 .task__inf{
     flex-direction: column;
