@@ -18,6 +18,20 @@ let tasks=[
 
 ]
 
+function gettaskfromstorge(){
+  let reteivedtask=JSON.parse(localStorage.getItem("mytask"))
+// if(reteivedtask==null){
+// tasks=[]
+// }
+// else{
+// tasks=reteivedtask
+// }
+tasks=reteivedtask ?? []
+}
+gettaskfromstorge()
+
+
+
 function fillTask(){
 
 $('.tasks').html("")
@@ -69,6 +83,7 @@ let task_object={
     "Isdone":false,
 }
 tasks.push(task_object)
+storeTasks();
 fillTask()
 
 })
@@ -80,6 +95,8 @@ let task=tasks[index]
    let isconfirm= confirm("Are you sure you wanna delete" + " "+task.titel)
    if(isconfirm){
     tasks.splice(index,1)
+    storeTasks();
+
     fillTask()
    }
 
@@ -91,6 +108,7 @@ function editTask(index){
     let task=tasks[index]
        let newTask= prompt(" write a new title for the task" ,task.titel)
        task.titel=newTask
+       storeTasks();
         fillTask()
        }
     
@@ -103,10 +121,21 @@ function completeTask(index){
     else{
         task.Isdone=true;
     }
+
     //يختصر كل الجملة الشرطية الي فوقه بكفي  لحاله
     // task.Isdone=!task.Isdone;
     
+storeTasks();
 
     fillTask();
+
+}
+
+
+
+//==============storage function =============
+function storeTasks(){
+    let tasksString=JSON.stringify(tasks)
+    localStorage.setItem("mytask" ,tasksString)
 
 }
