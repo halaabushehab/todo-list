@@ -15,11 +15,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-<!--  #  #81BFB7       #FFD3DD  #F3A2BE   
+<!--   #81BFB7       #FFD3DD  #F3A2BE   
   #565C7A   #A8738B #86A4C2  #9D92AF  #BCBCD2
 
 -->
-
 
 
 
@@ -29,10 +28,9 @@
       <input type="text" id="username" placeholder="Username here..." />
       <label for="password">Password:</label>
       <input type="password" id="password" placeholder="Password here..." />
-      <button class="Login">Login</button>
+       <button   class="Login_todolist">Login</button> 
       <a href="./register.html"> </a> 
-
-      <div class="forget" style="margin:8px; text-align: center;"> Forgot password?  <a href="#">click here</a></div>
+      <div class="register" style="margin:8px; text-align: center;"> Don't have an account? <a href="#" class="register">Register</a></div>
 
     </form>
     <div class="ear-l"></div>
@@ -58,6 +56,24 @@
 
 
 
+  <div class="modal" id="myModal" role="dialog"  >
+    <form class="modal_content">
+      <label for="username">Username:</label>
+      <input type="text" id="register_name" placeholder="Username here..." />
+      <label for="email">Emsil:</label>
+      <input type="email" id="register_email" placeholder="email here..." />
+      <label for="password">Password:</label>
+      <input type="password" id="register_password" placeholder="Password here..." />
+      <label for="checkbox">I agree to term cinditions 
+        <input type="checkbox"  placeholder="email here..." />
+      </label>      
+
+      <button   class="register_btn">Register</button> <br>
+      
+      <a href="./register.html"> </a> 
+      <div class="have_register" style="margin:8px; text-align: center;"> Don't have an account? <a href="#" class="register">Register</a></div>
+    </form>
+  </div>
 
 
 
@@ -73,7 +89,7 @@
 
 
 <div class="main">
-    <!-- center   -->
+<button class="log_out">log out</button>    <!-- center   -->
      <div class="box">
         <!-- task tabla -->
         <div class="tasktable">
